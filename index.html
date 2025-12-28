@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Saran | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .about-header svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .about-header .title {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .about-header .title span {
+      color: var(--accent);
+    }
+
+    .skill-header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .skill-header svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      fill: #fff;
+    }
+
+    .skill-header .title {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    .skill-header .title span {
+      color: var(--yellow-bg);
+    }
+
+    .skill-header .title.light {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    .edu-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .edu-header svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: #333;
+      margin-right: 10px;
+    }
+
+    .edu-header .title {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .edu-header .title span {
+      color: var(--accent);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-header svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: #333;
+      margin-right: 8px;
+    }
+
+    .contact-header .title {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 0;
+    }
+
+    .contact-header .title span {
+      color: var(--accent);
+    }
+
+    .contact-form-wrapper {
+      text-align: right;
+    }
+
+    .footer-col p.margin-top {
+      margin-top: 20px;
+    }
+
+    /* Copy Protection */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    img {
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+    }
+    /* Allow hover effect on profile image */
+    .grayscale-img {
+      pointer-events: auto;
+    }
+    /* Allow selection in form inputs */
+    input, textarea {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js?v=20251228" defer></script>
+</head>
+
+<body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Saran.</div>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <nav aria-label="Main navigation" id="nav-menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-left">
+      <h1>Hi There,</h1>
+      <h2>
+        I'm <span class="name">Saran</span> <span class="name-accent">Venkatesh</span>
+      </h2>
+      <p class="hero-subtitle">I am <span class="typing"><span class="typing-text">Backend Development</span></span></p>
+
+      <a href="#about" class="hero-btn">About Me</a>
+
+      <nav class="social" aria-label="Social links">
+        <a class="social-link" href="https://www.linkedin.com/in/saran-venkatesh-b-a664002bb/" aria-label="LinkedIn"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1c1.38 0 2.5 1.12 2.5 2.5ZM.5 8h4V23h-4V8Zm7 0h3.8v2.05h.05C11.86 8.9 13.5 7.7 15.93 7.7c4.07 0 4.82 2.68 4.82 6.16V23h-4v-7.1c0-1.7-.03-3.89-2.37-3.89-2.38 0-2.74 1.86-2.74 3.78V23h-4V8Z" />
+          </svg>
+        </a>
+
+        <a class="social-link" href="https://github.com/Saranbalusamy" aria-label="GitHub" target="_blank"
+          rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M12 .5C5.73.5.75 5.6.75 12c0 5.18 3.44 9.57 8.2 11.12.6.11.82-.27.82-.6 0-.29-.01-1.06-.02-2.08-3.33.74-4.03-1.65-4.03-1.65-.55-1.42-1.34-1.8-1.34-1.8-1.1-.77.08-.76.08-.76 1.21.09 1.85 1.27 1.85 1.27 1.08 1.88 2.83 1.34 3.52 1.02.11-.8.42-1.35.76-1.66-2.66-.31-5.46-1.36-5.46-6.03 0-1.33.46-2.42 1.23-3.27-.12-.31-.53-1.57.12-3.27 0 0 1-.33 3.3 1.25a11.12 11.12 0 0 1 6 0c2.3-1.58 3.3-1.25 3.3-1.25.65 1.7.24 2.96.12 3.27.77.85 1.23 1.94 1.23 3.27 0 4.68-2.81 5.71-5.48 6.02.43.38.82 1.13.82 2.28 0 1.65-.02 2.98-.02 3.38 0 .33.22.72.83.6 4.75-1.55 8.19-5.94 8.19-11.12C23.25 5.6 18.27.5 12 .5Z" />
+          </svg>
+        </a>
+
+        <a class="social-link" href="https://x.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M21.5 7.1c.02.18.02.36.02.55 0 5.58-4.14 12.02-11.72 12.02-2.33 0-4.5-.7-6.33-1.9.33.04.64.05.98.05 1.92 0 3.68-.66 5.08-1.78-1.8-.04-3.31-1.25-3.83-2.92.25.04.5.07.77.07.36 0 .72-.05 1.06-.14-1.88-.39-3.3-2.08-3.3-4.11v-.05c.54.31 1.17.5 1.83.52-1.1-.76-1.83-2.06-1.83-3.52 0-.78.2-1.5.57-2.12 2.02 2.55 5.04 4.22 8.45 4.4-.06-.31-.1-.64-.1-.98 0-2.36 1.88-4.27 4.2-4.27 1.2 0 2.29.52 3.05 1.34.95-.19 1.85-.55 2.66-1.04-.31 1-.97 1.84-1.83 2.37.85-.1 1.67-.33 2.43-.67-.57.85-1.28 1.6-2.1 2.2Z" />
+          </svg>
+        </a>
+
+        <a class="social-link" href="https://www.instagram.com/saran___venkatesh/" aria-label="Instagram"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6A5.2 5.2 0 0 1 16.8 22H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm9.6 2H7.2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.6-2.1a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <div class="hero-right">
+      <div class="quotes-container">
+        <p class="hero-quote" id="heroQuote">"Success is not luck, it's consistency."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="about-header">
+      <svg viewBox="0 0 448 512" width="28" height="28">
+        <path
+          d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.7-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
+          fill="#111" />
+      </svg>
+      <h2 class="title">About <span>Me</span></h2>
+    </div>
+
+    <div class="about-container">
+      <div class="about-left">
+        <div class="about-img-box">
+          <img src="assets/photo.jpeg" alt="Saran Profile" class="grayscale-img">
+        </div>
+      </div>
+
+      <div class="about-right">
+        <h3>I'm Saran Venkatesh B</h3>
+        <h4>Web Developer | AI &amp; ML Engineer | Vibe Coder</h4>
+
+        <p class="about-desc">
+          Pre-final year B.Tech student in Artificial Intelligence and Data Science with a strong interest in full-stack
+          web development and AI/ML engineering.
+          I enjoy transforming ideas into real-world applications by combining modern web technologies with intelligent
+          models and building scalable, user-friendly solutions.
+          My goal is to contribute to impactful projects while continuously growing as a developer and AI engineer.
+        </p>
+
+        <div class="about-contact">
+          <div class="contact-item"><span class="label">Email :</span> saranbalusamy10@gmail.com</div>
+          <div class="contact-item"><span class="label">Place :</span> Avinashi, Tiruppur - 641 670</div>
+        </div>
+
+        <a href="https://drive.google.com/file/d/1Wi3Ub1KTK6n8sSFkl16aedKW6sG7qQey/view?usp=sharing"
+          class="resume-btn">Resume &gt;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="skill-header">
+      <svg viewBox="0 0 640 512" width="30" height="30">
+        <path
+          d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+      </svg>
+      <h2 class="title light">Skills &amp; <span>Abilities</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-card">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-javascript-plain colored"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-react-original colored"></i>
+        <span>React</span>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-card">
+        <i class="devicon-nodejs-plain colored"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-mongodb-plain colored"></i>
+        <span>MongoDB</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-mysql-plain colored"></i>
+        <span>SQL</span>
+      </div>
+
+      <!-- AI/ML -->
+      <div class="skill-card">
+        <i class="devicon-python-plain colored"></i>
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-tensorflow-original colored"></i>
+        <span>TensorFlow</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#ccda46">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+        </svg>
+        <span>Deep Learning</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#00bcd4">
+          <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z" />
+        </svg>
+        <span>YOLOv8</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#ff9800">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" />
+        </svg>
+        <span>Machine Learning</span>
+      </div>
+
+      <!-- Languages & Tools -->
+      <div class="skill-card">
+        <i class="devicon-java-plain colored"></i>
+        <span>Java</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-c-plain colored"></i>
+        <span>C</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-bootstrap-plain colored"></i>
+        <span>Bootstrap</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-git-plain colored"></i>
+        <span>Git</span>
+      </div>
+      <div class="skill-card">
+        <i class="devicon-vscode-plain colored"></i>
+        <span>VS Code</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#EF5B25">
+          <path d="M12 0L1.75 6.5L12 13L22.25 6.5L12 0Z" />
+          <path d="M12 13l-10.25-6.5v11L12 24l10.25-6.5v-11L12 13z" />
+        </svg>
+        <span>Postman</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#00C7B7">
+          <path
+            d="M5.5 2h13a1.5 1.5 0 0 1 1.5 1.5v17a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5v-17A1.5 1.5 0 0 1 5.5 2zm2.25 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zm0 4a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zm0 4a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5h-5z" />
+        </svg>
+        <span>Netlify</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#fff">
+          <path d="M24 22.525H0l12-21.05 12 21.05z" />
+        </svg>
+        <span>Vercel</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#217346">
+          <path d="M2 3l7 2v14l-7 2V3zm8 0h12v18H10V3zm2 4v2h8V7h-8zm0 4v2h8v-2h-8zm0 4v2h8v-2h-8z" />
+        </svg>
+        <span>Excel</span>
+      </div>
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="#FF4F5E">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span>Lovable</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="education">
+    <div class="edu-header">
+      <svg viewBox="0 0 640 512" width="40" height="40">
+        <path
+          d="M622.6 271.1l-18.5-37c-6.9-13.8-23.1-19.4-36.9-12.5-13.8 6.9-19.4 23.1-12.5 36.9l18.5 37c6.9 13.8 23.1 19.4 36.9 12.5 13.8-6.9 19.4-23.1 12.5-36.9zM320 320c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-256C178.6 64 64 178.6 64 320s114.6 256 256 256 256-114.6 256-256S461.4 64 320 64zM320 0c176.7 0 320 143.3 320 320s-143.3 320-320 320S0 496.7 0 320 143.3 0 320 0zm0 160c-88.4 0-160 71.6-160 160s71.6 160 160 160 160-71.6 160-160-71.6-160-160-160zM0 320c0-176.7 143.3-320 320-320s320 143.3 320 320-143.3 320-320 320S0 496.7 0 320z"
+          fill="var(--ink)" style="opacity:0;" /> <!-- Custom SVG Path simpler below -->
+        <path
+          d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8-4.7 9.6-9.9 19.2-13.5 29.4-2.1 5.9 2.1 11.9 8.3 11.9H62.3c4.7 0 9.2-2.1 12.2-5.7 3.8-4.7 7.2-9.6 10.2-14.7C104.3 381.9 112 338 112 292v-28.1c0-26.6-6.1-51.8-16.9-74.6l195.9 70.4c9.2 3.3 19.3 3.3 28.6 0l280.5-101c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 292c0 20.8-3.4 40.7-9.5 59.4 6 5.8 12.4 11.2 19.2 16.1C183.1 399.7 248.9 416 320 416s136.9-16.3 182.3-48.5c6.8-4.8 13.2-10.3 19.2-16.1-6.1-18.7-9.5-38.6-9.5-59.4v-42.2l-145 52.2c-15.3 5.5-32.1 5.5-47.4 0l-145-52.2V292z" />
+      </svg>
+      <h2 class="title">My <span>Education</span></h2>
+    </div>
+
+    <p class="edu-quote">Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.</p>
+
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="assets/college.jpg" alt="Kongu Engineering College">
+      </div>
+      <div class="edu-content">
+        <h3 class="edu-title">Bachelor of Technology In Artificial Intelligence &amp; Data Science</h3>
+        <p class="edu-college">Kongu Engineering College , Perundurai.</p>
+        <span class="edu-status">2023-2027 | Pursuing</span>
+        <span class="edu-status">CGPA : 7.79</span>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="assets/school.jpg" alt="School">
+      </div>
+      <div class="edu-content">
+        <h3 class="edu-title">HSC Mathematics | Computer Science</h3>
+        <p class="edu-college">Shri Ganga Higher Secondary School , Ingur.</p>
+        <span class="edu-status">2022-2023 | Completed</span>
+        <span class="edu-status">Percentage : 89%</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 class="title light">Projects Made</h2>
+
+    <div class="project-grid">
+      <div class="project">
+        <img src="assets/project1.png" alt="Automated Coconut Sorting project">
+        <h4>Automated Coconut Sorting</h4>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>Automated Coconut Sorting</h3>
+            <p class="popup-desc">Automated coconut sorting uses YOLOv8 with cameras
+              and AI to detect ripeness, quality, and defects in real time.
+              It sorts coconuts into bins, ensuring fast, accurate, labor
+              free processing</p>
+            <div class="popup-tech">
+              <span class="tech-tag">YOLOv8</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Flask</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy/COCONUT-DETECTION" class="popup-btn">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/project2.png" alt="Student Progress Tracker project">
+        <h4>Student Progress Tracker</h4>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>Student Progress Tracker</h3>
+            <p class="popup-desc">The Student Progress Tracker is a web-based application
+              that centrally manages student academic records and
+              performance. It provides real-time tracking, analytics,
+              and reports for students, teachers, and administrators</p>
+            <div class="popup-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express.js</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy/Student-Progress-Tracker" class="popup-btn">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/project3.png" alt="Tuberculosis Prediction project">
+        <h4>Tuberculosis Prediction</h4>
+        <p>Hybrid Deep Learning model</p>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>Tuberculosis Prediction</h3>
+            <p class="popup-desc">Tuberculosis prediction uses a Hybrid Model (ResNet50 +
+              DeiT Vision Transformer )model to analyze medical data or X
+              rays for early TB detection. It enables faster, and automated
+              diagnosis support.</p>
+            <div class="popup-tech">
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Keras</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CNN</span>
+              <span class="tech-tag">Hybrid Model (ResNet50 + DeiT)</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy/TUBERCULOSIS-PREDICTION-USIND-DL" class="popup-btn">View
+                Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden projects - shown when "View All" is clicked -->
+      <div class="project project-hidden">
+        <img src="assets/project4.png" alt="Portfolio Website project">
+        <h4>Portfolio Website</h4>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>Portfolio Website</h3>
+            <p class="popup-desc">A modern, responsive portfolio website showcasing projects, skills, and experience
+              with interactive animations and smooth user experience.</p>
+            <div class="popup-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy" class="popup-btn">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project project-hidden">
+        <img src="assets/project5.png" alt="Student Management project">
+        <h4>STUDENT MANAGEMENT</h4>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>STUDENT MANAGEMENT</h3>
+            <p class="popup-desc">Student Tracker MERN-stack PROJECT for managing student records with CRUD operations. It offers a
+modern, responsive UI with gradients, glass morphism, and MongoDB integration.</p>
+            <div class="popup-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">React.js</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy/STUDENT-MANAGEMENT" class="popup-btn">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project project-hidden">
+        <img src="assets/project6.jpg" alt="Chat Application project">
+        <h4>HOSTEL MAINTENANCE SYSTEM</h4>
+        <div class="project-popup">
+          <div class="popup-content">
+            <h3>HOSTEL MAINTENANCE SYSTEM</h3>
+            <p class="popup-desc">The Hostel Complaint &amp; Maintenance Tracking System is a web-based application that allows students to raise and track hostel maintenance issues online with complete transparency. It enables admins and maintenance staff to manage.</p>
+            <div class="popup-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">FireBase</span>
+            </div>
+            <div class="popup-links">
+              <a href="https://github.com/Saranbalusamy/HOSTEL-MAINTENANCE-SYSTEM" class="popup-btn">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all-container">
+      <button type="button" class="view-all-btn" id="viewAllBtn">
+        <span class="btn-text">View All Projects</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          class="arrow-down">
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          class="arrow-up">
+          <path d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-header">
+      <svg viewBox="0 0 512 512" width="30" height="30">
+        <path
+          d="M256 0c-44.2 0-80 35.8-80 80v32h-4V80c0-66.3 53.7-120 120-120s120 53.7 120 120v32h-4V80c0-44.2-35.8-80-80-80zM64 112c-35.3 0-64 28.7-64 64v192c0 35.3 28.7 64 64 64h16v-64H64c0-17.7-14.3-32-32-32V176c17.7 0 32-14.3 32-32H64zm384 0h-16c0 17.7 14.3 32 32 32v160c-17.7 0-32 14.3-32 32h16c35.3 0 64-28.7 64-64V176c0-35.3-28.7-64-64-64zM240 144h32v32h-32zm0 64h32v32h-32zm0 64h32v32h-32zm-64-128h32v32h-32zm0 64h32v32h-32zm0 64h32v32h-32zm128-128h32v32h-32zm0 64h32v32h-32zm0 64h32v32h-32z" />
+        <path d="M192 480c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32z"
+          fill="black" /> <!-- Headset icon simple rep -->
+        <path
+          d="M16 192C16 174.3 30.3 160 48 160H464c17.7 0 32 14.3 32 32V384c0 17.7-14.3 32-32 32H48c-17.7 0-32-14.3-32-32V192z"
+          opacity="0" /> <!-- Invisible spacer -->
+        <path
+          d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM54.1 369.9L100.2 416c4.7 4.7 12.3 4.7 17 0l111-111c4.7-4.7 4.7-12.3 0-17L182.1 242c-18.7-18.7-49.1-18.7-67.9 0L54.1 302c-18.7 18.7-18.7 49.1 0 67.9zM368 320c0 8.8 7.2 16 16 16h32V160h-32c-8.8 0-16 7.2-16 16v144zM96 320h32c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H96c-8.8 0-16 7.2-16 16v128c0 8.8 7.2 16 16 16z"
+          fill="#000" />
+      </svg>
+      <h2 class="title">Get In <span>Touch</span></h2>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-image">
+        <img src="assets/contact.avif" alt="Contact Illustration">
+      </div>
+
+      <form class="contact-form-new" id="contact-form">
+        <div class="input-group">
+          <span class="icon"><i class="fas fa-user"></i></span>
+          <input type="text" name="from_name" placeholder="Name" required>
+        </div>
+        <div class="input-group">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <input type="email" name="from_email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <span class="icon"><i class="fas fa-phone"></i></span>
+          <input type="text" name="phone" placeholder="Phone">
+        </div>
+        <div class="input-group">
+          <span class="icon"><i class="fas fa-comment-dots"></i></span>
+          <textarea name="message" placeholder="Message" required></textarea>
+        </div>
+        <div class="contact-form-wrapper">
+          <button type="submit" class="contact-btn">Submit <i class="fas fa-paper-plane"></i></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h3>Saran's Portfolio</h3>
+        <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+        <p class="margin-top">Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home"><svg viewBox="0 0 320 512" width="14">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  fill="currentColor" />
+              </svg> Home</a></li>
+          <li><a href="#about"><svg viewBox="0 0 320 512" width="14">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  fill="currentColor" />
+              </svg> About</a></li>
+          <li><a href="#skills"><svg viewBox="0 0 320 512" width="14">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  fill="currentColor" />
+              </svg> Skills</a></li>
+          <li><a href="#education"><svg viewBox="0 0 320 512" width="14">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  fill="currentColor" />
+              </svg> Education</a></li>
+          <li><a href="#projects"><svg viewBox="0 0 320 512" width="14">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  fill="currentColor" />
+              </svg> Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 512 512" width="16" fill="#ff7a00">
+              <path
+                d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 27.9l45 35.9c-44.2 71.7-101.5 129-173.2 173.2l-35.9-45c-6.6-8.3-18.1-11.1-27.9-6.9l-112 48C6.2 366.5 0.3 378.1 2.9 389.4l24 104C29.7 504.8 41.5 512 53.3 512 299.7 512 512 299.7 512 53.3c0-11.8-7.2-23.6-18.6-28.7z" />
+            </svg>
+            +91 9787497669
+          </li>
+          <li>
+            <svg viewBox="0 0 512 512" width="16" fill="#fbc524">
+              <path
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+            </svg>
+            saranbalusamy10@gmail.com
+          </li>
+          <li>
+            <svg viewBox="0 0 384 512" width="16" fill="#ff7a00">
+              <path
+                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+            </svg>
+            Avinashi, Tiruppur
+          </li>
+        </ul>
+
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+          <a href="#" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+          <a href="#" aria-label="Twitter"><i class="devicon-twitter-original"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
